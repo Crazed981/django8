@@ -4,5 +4,5 @@ from .models import Article
 # Create your views here.
 
 def home(request):
-    post = Article.
-    return render(request, 'blockapp/home.html')
+    posts = Article.objects.all()
+    return render(request, 'blockapp/home.html', {'posts':posts})
